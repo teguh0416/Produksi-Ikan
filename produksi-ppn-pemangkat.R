@@ -31,6 +31,7 @@ plot_produksi <- ggplot(produksi, aes(x=Tahun, y=Produksi)) +
   )
 plot_produksi
 
+#Ikan Ekonomis Penting
 ikan_ekonomis <- data_ppn_pemangkat %>%
   group_by(jenis_ikan = ikan) %>%
   summarise(Produksi = sum(produksi), Nilai = format(round(mean(nilai), digits = 0), scientific = FALSE)) %>%
